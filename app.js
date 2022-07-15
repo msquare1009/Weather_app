@@ -1,6 +1,8 @@
 // Simple weather app using free Weatherapi
 const fetch = require('node-fetch');
-const url = 'http://api.weatherapi.com/v1/current.json?key=cc44c3e2a3524cdfa2f123819222705&q=London&aqi=no';
+//const url = 'http://api.weatherapi.com/v1/current.json?key=cc44c3e2a3524cdfa2f123819222705&q=London&aqi=no';
+const city = process.argv.slice(2);
+const url = `http://api.weatherapi.com/v1/current.json?key=cc44c3e2a3524cdfa2f123819222705&q=${city}&aqi=no`;
 
 const getWeatherData = async () => {
     try {
